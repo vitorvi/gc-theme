@@ -1,0 +1,206 @@
+#capa-sobre {
+    height: 60vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/Cover_Sobre_Mobile.jpg");
+    @include media-breakpoint-up(lg) {
+        height: calc(66vh - 2.5rem);
+        background-image: url("../assets/Cover_Sobre.jpg");
+    }
+}
+
+#intro-sobre {
+    box-shadow: 0 0 6rem 3rem rgba($azul, 0.15);
+    background-color: $cinza-claro;
+    padding-top: $component-mobile-margin-bottom;
+    padding-bottom: $component-mobile-margin-bottom;
+    @include media-breakpoint-up(lg) {
+        padding-top: $component-desktop-margin-bottom*0.75;
+        padding-bottom: $component-desktop-margin-bottom*0.75;
+    }
+    p {
+        text-align: center;
+        color: $azul;
+    }
+}
+
+.gradiente-ruido {
+    background-image: url("../assets/gradiente-ruidoso.png");
+    background-size: $component-mobile-margin-bottom*4;
+    height: $component-mobile-margin-bottom*4;
+    @include media-breakpoint-up(lg) {
+        padding-top: $component-desktop-margin-bottom*2;
+        background-size: $component-desktop-margin-bottom*2;
+    }
+}
+
+#processo {
+    background-color: $branco;
+    padding-top: $component-mobile-margin-bottom;
+    padding-bottom: 1.5 * $component-mobile-margin-bottom;
+    @include media-breakpoint-up(lg) {
+        padding-top: $component-desktop-margin-bottom;
+        padding-bottom: 1.5 * $component-desktop-margin-bottom;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    img {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+    }
+    .etapa {
+        padding-top: 1.5 * $component-mobile-margin-bottom;
+        @include media-breakpoint-up(lg) {
+            padding-top: 1.5 * $component-desktop-margin-bottom;
+        }
+    }
+}
+
+#servicos {
+    .row {
+        border-top: 1px solid $cinza;
+        padding-bottom: $component-mobile-margin-bottom;
+        padding-top: $component-mobile-margin-bottom;
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $component-desktop-margin-bottom;
+            padding-top: $component-desktop-margin-bottom;
+        }
+    }
+    h2 {
+        text-align: left;
+        color: $rosa;
+        //font-variant: unset;
+        //letter-spacing: 0;
+        //word-spacing: 0;
+    }
+    ul {
+        margin-bottom: .5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#equipe {
+    background-color: $cinza-claro;
+    padding-top: $component-mobile-margin-bottom;
+    @include media-breakpoint-up(lg) {
+        padding-top: $component-desktop-margin-bottom;
+    }
+    .titulo {
+        @include componente;
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+    .membro {
+        @include componente;
+        figure {
+            padding-bottom: 100%;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 1.5rem;
+            transform: scale(1.04);
+        }
+        .nome {
+            text-align: center;
+            margin-bottom: .5rem;
+            display: inline-flex;
+            color: $azul;
+            justify-content: center;
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                justify-content: flex-start;
+            }
+            svg {
+                height: 0.75rem;
+                margin-right: .25rem;
+                fill: $azul;
+                transition: fill .1s linear;
+                margin-top: -2px;
+                &:hover {
+                    fill: $rosa;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            font-weight: 100;
+        }
+        @include media-breakpoint-up(md) {
+            margin-right: 1px;
+            .nome, p {
+                text-align: left;
+            }
+        }
+    }
+    .membro-clearfix {
+        @include media-breakpoint-up(lg) {
+            margin-right: 1px;
+        }
+        height: 1px;
+    }
+    #membros-mobile {
+        .owl-carousel {
+            z-index: 0;
+        }
+        padding-left: .75rem;
+        padding-right: .75rem;
+        position: relative;
+        .owl-stage-outer {
+            overflow: visible !important;
+            overflow-y: hidden;
+            z-index: 1;
+            &:active {
+                cursor: -webkit-grabbing;
+                cursor: grabbing;
+            }
+            .owl-stage {
+                overflow: visible !important;
+                overflow-y: hidden;
+                .owl-item:not(.active) {
+                }
+            }
+            .owl-item {
+                .nome, a, p {
+                    opacity: 1;
+                    transition: opacity .3s linear;
+                }
+                &:not(.active) {
+                    .nome, a, p {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .prev, .next {
+            position: absolute;
+            top: calc(100vw - 3.25rem);
+            width: .75rem;
+            z-index: 1;
+            svg {
+                fill: none;
+                stroke: $rosa;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 8px;
+                transition: transform .25s ease;
+                width: .5rem;
+                overflow: visible;
+            }
+        }
+        .prev {
+            left: -.5rem;
+        }
+        .next {
+            right: -.5rem;
+        }
+    }
+}

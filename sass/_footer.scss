@@ -1,0 +1,164 @@
+footer {
+    a {
+        font-style: italic;
+        color: $branco;
+        font-weight: 400;
+        transition: color .1s linear, transform .1s ease-in-out;
+        &:hover {
+            color: $rosa;
+        }
+    }
+    #formulario-contato {
+        padding-top: $component-mobile-margin-bottom;
+        border-bottom: 1px solid $cinza;
+        background-color: $azul;
+        @include media-breakpoint-up(lg) {
+            padding-top: $component-desktop-margin-bottom;
+        }
+        h1 {
+            color: $branco;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form {
+            margin-bottom: $component-mobile-margin-bottom;
+           @include media-breakpoint-up(lg) {
+                margin-bottom: $component-desktop-margin-bottom;
+            }
+        }
+    }
+    #contatos {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        background-color: $azul;
+        ul {
+            list-style-type: none;
+            li {
+                margin-top: .5rem;
+                color: $branco;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        address {
+            ul {
+                margin-bottom: 2rem;
+                text-align: center;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                    border-left: 1px solid $cinza;
+                    border-bottom: 0;
+                    padding-left: 1rem;
+                    text-align: left;
+                    padding-bottom: 0;
+                }
+            }
+            a {
+                svg {
+                    fill: $branco;
+                    transform: translateY(0);
+                    transition: fill .1s linear, transform .1s ease-in-out;
+                    margin-right: .5rem;
+                }
+                &:hover {
+                    svg {
+                        fill: $rosa;
+                    }
+                }
+            }
+            hr {
+                width: calc(#{100% / 3} + #{2*$grid-gutter-width/3});
+                margin-top: 0;
+                margin-bottom: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+                border-top: 1px solid $cinza;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            address {
+                ul {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .sede {
+                &:first-of-type {
+                    border-right: none;
+                }
+                ul {
+                    text-align: center;
+                    li {
+                        display: inline-flex;
+                        a {
+                            margin-left: .25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sede {
+            @include media-breakpoint-up(sm) {
+                ul {
+                    padding-left: .5rem;
+                }
+                &:first-of-type {
+                    text-align: right;
+                    border-right: 1px solid $cinza;
+                    ul {
+                        padding-right: .5rem;
+                    }
+                }
+            }
+            @include media-breakpoint-up(md) {
+                ul {
+                    padding-left: 0;
+                }
+                &:first-of-type {
+                    text-align: left;
+                    border-right: none;
+                    ul {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        .midias {
+            justify-content: center;
+            padding-top: 2rem;
+            @include media-breakpoint-up(md) {
+                justify-content: flex-start;
+                text-align: left;
+                padding-top: 1rem;
+            }
+             @include media-breakpoint-up(lg) {
+                padding-top: 0;
+                justify-content: flex-end;
+            }
+            li {
+                display: inline-flex;
+                margin-left: .5rem;
+                margin-top: 0;
+                margin-bottom: 0;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            svg, img {
+                fill: $branco;
+                width: 100%;
+                transform: translateY(0);
+                transition: fill .1s linear, transform .1s ease-in-out;
+                &:hover {
+                    fill: $rosa;
+                    //transform: translateY(-.125rem);
+                }
+            }
+        }
+    }
+}

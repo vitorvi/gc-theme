@@ -1,0 +1,57 @@
+/*!
+ * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+	@import "custom_functions";
+@import "functions";
+	@import "custom_variables";
+@import "variables";
+@import "mixins";
+//@import "root"; // :root
+//@import "print"; // @if $enable-print-styles @media print
+@import "reboot";
+	@import "custom_reboot";
+@import "type";
+	@import "custom_type";
+// @import "images"; // .img-fluid, .img-thumbnail, .figure, .figure-img, .figure-caption
+//@import "code"; // code, kbd, pre, samp, .pre-scrollable
+	@import "custom_grid";
+@import "grid";
+//@import "tables"; // .table, .table-sm, .table-bordered, .table-striped, .table-hover, .table-dark, .table-responsive
+@import "forms";
+	@import "custom_forms";
+@import "buttons";
+	@import "custom_buttons";
+@import "transitions";
+	@import "custom_transitions";
+@import "dropdown";
+@import "button-group";
+//@import "input-group"; // .input-group, .input-group-addon, .input-group-btn, .input-group-lg, .input-group-sm
+//@import "custom-forms"; // .custom-#{ $formelement }
+//@import "nav";
+@import "navbar";
+//@import "card";
+//@import "breadcrumb";
+//@import "pagination";
+//@import "badge";
+//@import "jumbotron";
+//@import "alert";
+//@import "progress";
+//@import "media";
+//@import "list-group";
+//@import "close";
+//@import "modal";
+//@import "tooltip";
+//@import "popover";
+//@import "carousel";
+@import "utilities";
+	@import "header";
+	@import "footer";
+	@import "home";
+	@import "trabalhos";
+	@import "trabalho";
+	@import "sobre";
+	@import "cursos";

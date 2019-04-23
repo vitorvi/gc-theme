@@ -1,0 +1,44 @@
+// Custom GC functions
+
+// @font-face mixins:
+
+// needs improvements. Something like the basic mixin down below.
+@mixin complete-font-face($font-map) {
+    @each $font, $style-list in $font-map {
+        @each $style, $weight-list in $style-list {
+            @each $weight in $weight-list {
+                @font-face {
+                    font-family: '#{$font}';
+                    src: url('../fonts/#{$font}/#{$font}_#{$style}_#{$weight}.eot');
+                    src: url('../fonts/#{$font}/#{$font}_#{$style}_#{$weight}.eot?#iefix') format('embedded-opentype'),
+                         url('../fonts/#{$font}/#{$font}_#{$style}_#{$weight}.woff') format('woff'),
+                         url('../fonts/#{$font}/#{$font}_#{$style}_#{$weight}.ttf') format('truetype');
+                    font-style: $style;
+                    font-weight: $weight;
+                }
+            }
+        }
+    }
+}
+
+@mixin basic-font-face($font-map) {
+    @each $font, $style-list in $font-map {
+        @each $style, $weight-list in $style-list {
+            $style-prefix: "_";
+            @if $style == null { $style-prefix: ""; }
+            @each $weight in $weight-list {
+                $weight-prefix: "_";
+                @if $weight == null { $weight-prefix: ""; }
+                @font-face {
+                    font-family: '#{$font}';
+                    src: url('../fonts/#{$font}/#{$font}#{$style-prefix}#{$style}#{$weight-prefix}#{$weight}.woff2') format('woff2'), 
+                         url('../fonts/#{$font}/#{$font}#{$style-prefix}#{$style}#{$weight-prefix}#{$weight}.woff') format('woff');
+                    @if $style == null { $style: normal; }
+                    @if $weight == null { $weight: normal; }
+                    font-style: $style;
+                    font-weight: $weight;
+                }
+            }
+        }
+    }
+}

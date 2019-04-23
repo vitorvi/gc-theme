@@ -1,0 +1,260 @@
+header {
+
+    box-shadow: 0 2px 4px 0 rgba($azul, 0.1);
+    background-color: $branco;
+    width: 100%;
+    top: 0;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    z-index: 10;
+    transition: background-color .1s linear, transform .25s ease-in-out;
+    .logo {
+        svg {
+            display: block;
+            height: 1.5rem;
+            transition: fill .1s linear;
+            &:hover {
+                fill: $rosa;
+            }
+        }
+    }
+
+    #menu-button {
+        padding: 0;
+        border: 0;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        &.collapsed {
+            #linha-1, #linha-3 { transform: rotate(0) translateY(0); }
+            #linha-2 { transform: scaleX(1); }
+        }
+        svg {
+            height: 1rem;
+            width: 1rem;
+            display: block;
+        }
+        .linha {
+            background-color: $azul;
+            display: block;
+            position: absolute;
+            border-radius: 1px;
+            height: 2px;
+            transition: transform .15s ease-in-out;
+            width: 24px;
+        }
+        #linha-1 {
+            top: 3px;
+            transform: translateY(8px) rotate(45deg);
+        }
+        #linha-2 {
+            top: 11px;
+            transform: scaleX(0);
+        }
+        #linha-3 {
+            top: 19px;
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+
+    #menu-mobile {
+        width: 100%;
+        &.show {
+            ul {
+                opacity: 1;
+                transform: translatey(0);
+                transition: opacity .25s linear, transform .25s ease;
+            }
+        }
+        > ul {
+            opacity: 0;
+            text-align: center;
+            height: calc(100vh - 2.5rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column wrap;
+            transform: translateY(-.5rem);
+            transition: opacity .1s linear, transform 0s ease .25s;
+            li {
+                list-style-type: none;
+                line-height: 2rem;
+                font-size: 1rem;
+                font-variant: all-small-caps;
+                letter-spacing: 1px;
+                margin-bottom: 0;
+                .language-chooser {
+                  display: flex;
+                  flex-flow: row nowrap;
+                  margin-top: .5rem;
+                  li {
+                    margin-left: .5rem;
+                    padding-left: .5rem;
+                    border-left: 2px solid $azul;
+                    &.active {
+                      a {
+                        font-weight: 600;
+                      }
+                    }
+                    &:first-child {
+                      margin-left: 0;
+                      padding-left: 0;
+                      border-left: 0;
+                    }
+                  }
+                }
+                @include media-breakpoint-up(md) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                a {
+                    color: $azul;
+                    &.current-page {
+                        font-weight: 400;
+                        color: $rosa;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-desktop {
+        ul {
+            margin-bottom: 0;
+                li, .flag {
+                margin-left: 1rem;
+                display: inline-block;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                &:first-child {
+                  margin-left: 0;
+                }
+                .language-chooser {
+                  li {
+                    margin-left: .5rem;
+                    padding-left: .5rem;
+                    border-left: 2px solid $azul;
+                    &.active {
+                      a {
+                        font-weight: 600;
+                      }
+                    }
+                    &:first-child {
+                      margin-left: 0;
+                      padding-left: 0;
+                      border-left: 0;
+                    }
+                  }
+                }
+                a {
+                    color: $azul;
+                    font-variant: small-caps;
+                    text-transform: lowercase;
+                    transition: color .1s linear;
+                    letter-spacing: .5px;
+                    font-weight: 200;
+                    position: relative;
+                    &.current-page {
+                        font-weight: 400;
+                        color: $rosa;
+                        &:hover {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                    &:active {
+                        color: $rosa;
+                    }
+                    &::after {
+                        content: '';
+                        width: 0;
+                        position: absolute;
+                        height: 2px;
+                        background-color: $rosa;
+                        bottom: -.125rem;
+                        right: 0;
+                        transition: width .1s ease;
+                        border-radius: 1px;
+                    }
+                    &:hover::after {
+                        content: '';
+                        width: 100%;
+                        position: absolute;
+                        height: 2px;
+                        background-color: $rosa;
+                        bottom: -.125rem;
+                        left: 0;
+                        transition: width .1s ease;
+                        border-radius: 1px;
+                    }
+                }
+            }
+        }
+    }
+    &.header-home:not(.solid) {
+        background-color: transparent;
+        .logo {
+            svg {
+                fill: $branco;
+                -webkit-filter: drop-shadow( 0px 2px 4px rgba($azul, 0.25) );
+                filter: drop-shadow( 0px 2px 4px rgba($azul, 0.25) );
+                &:hover {
+                    fill: $rosa;
+                }
+            }
+        }
+        #menu-button {
+            svg {
+                stroke: $branco;
+            }
+            .linha {
+                background-color: $branco;
+                box-shadow: 0px 2px 4px rgba($azul, 0.25);
+            }
+        }
+        #menu-desktop {
+            ul {
+                .language-chooser {
+                  li {
+                    border-left: 2px solid $branco;
+                    &:first-child {
+                      border-left: 0;
+                    }
+                  }
+                }
+                li {
+                    a {
+                        color: $white;
+                        text-shadow: 0px 2px 4px rgba($azul, 0.25);
+                        &::after {
+                            content: '';
+                            width: 0;
+                            position: absolute;
+                            height: 2px;
+                            background-color: $branco;
+                            bottom: -.125rem;
+                            right: 0;
+                            transition: width .1s ease;
+                            border-radius: 1px;
+                        }
+                        &:hover::after {
+                            content: '';
+                            width: 100%;
+                            position: absolute;
+                            height: 2px;
+                            background-color: $branco;
+                            bottom: -.125rem;
+                            left: 0;
+                            transition: width .1s ease;
+                            border-radius: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

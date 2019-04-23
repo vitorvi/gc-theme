@@ -1,0 +1,135 @@
+#capa-home {
+    box-shadow: 0 2px 4px 0 rgba($azul, 0.1);
+    z-index: 1;
+    max-height: calc(100vh - 5rem);
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: -2.5rem;
+    position: relative;
+    @include media-breakpoint-up(lg) {
+        box-shadow: none;
+    }
+    video {
+        display: block;
+        pointer-events: none;
+    }
+    .chamada-home {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding-top: 2.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        h1 {
+            color: $branco;
+            text-align: center;
+            font-variant: unset;
+            font-family: ocre-poster-sans-swashes;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include media-breakpoint-up(lg) {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}
+
+#projeto .carrossel .next:hover svg {
+    transform: translateX(0.25rem);
+}
+
+#depoimentos {
+  position: relative;
+    background-color: $cinza-claro;
+    padding-bottom: $component-mobile-margin-bottom;
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $component-desktop-margin-bottom;
+    }
+    .owl-carousel {
+      .owl-stage {
+        overflow-x: visible;
+      }
+    }
+    hr {
+        border-top: 1px solid $cinza;
+        margin-top: 0;
+        width: 100%;
+        margin-bottom: $component-mobile-margin-bottom;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: $component-desktop-margin-bottom;
+        }
+    }
+    .next, .prev {
+      pointer-events: all;
+      cursor: pointer;
+      @include media-breakpoint-down(md) {
+        width: 1rem;
+      }
+      svg {
+        //filter: drop-shadow(0px 2px 4px rgba($azul, .25));
+        transition: transform .25s ease;
+        width: 100%;
+        overflow: visible;
+        path {
+          fill: none;
+          stroke-width: 3px;
+          stroke: $cinza;
+          stroke-linecap: round;
+          transition: stroke .15s ease;
+          @include media-breakpoint-down(md) {
+            stroke-width: 6px;
+          }
+        }
+      }
+      &:hover {
+        path {
+          stroke: $rosa;
+        }
+      }
+    }
+    .next:hover {
+      svg {
+          transform: translateX(0.25rem);
+      }
+    }
+    .prev:hover {
+      svg {
+          transform: translateX(-0.25rem);
+      }
+    }
+    .cite {
+      @include media-breakpoint-down(md) {
+        margin-top: 1rem;
+        order: 0;
+      }
+    }
+    .texto {
+      @include media-breakpoint-down(md) {
+        margin-top: .5rem;
+        order: 1;
+      }
+    }
+    .organizacao {
+      font-weight: 100;
+      border-left: 2px solid $azul;
+      padding-left: .5rem;
+      margin-left: .5rem;
+    }
+    .nav {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      pointer-events: none;
+      @include media-breakpoint-down(sm) {
+        top: calc(33vw + 1.5rem);
+      }
+    }
+}

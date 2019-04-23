@@ -1,0 +1,7 @@
+// Custom GC fluid container
+
+@if $enable-grid-classes {
+  .gc-container {
+    @include make-fluid-container();
+  }
+}

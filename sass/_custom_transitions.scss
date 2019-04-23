@@ -1,0 +1,41 @@
+// stylelint-disable selector-no-qualifying-type
+
+.fade {
+  opacity: 0;
+  @include transition($transition-fade);
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.collapse {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+}
+
+.fade-in {
+  transition: opacity .15s linear, transform .5s ease;
+  transform: translateY(0);
+  opacity: 1;
+  &.fade-hide {
+    transition: opacity 0s linear, transform 0s ease !important;
+    transform: translateY(5rem) !important;
+    opacity: 0 !important;
+    @include media-breakpoint-down(md) {
+      transform: translateY(3rem) !important;
+    }
+    @include media-breakpoint-up(lg) {
+      transform: translateY(5rem) !important;
+    }
+  }
+}

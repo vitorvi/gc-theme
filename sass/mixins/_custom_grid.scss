@@ -1,0 +1,15 @@
+/// Custom GC Grid System
+
+// Creates fluid containers with responsive percentage based widths
+@mixin make-fluid-container($widths: $container-fluid-widths, $breakpoints: $grid-breakpoints) {
+	max-width: calc(100% - #{ 3 * $grid-gutter-width });
+	//padding-right: ($grid-gutter-width / 2);
+  //padding-left: ($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+	@each $breakpoint, $fluid-width in $widths {
+  	@include media-breakpoint-up($breakpoint, $breakpoints) {
+    		width: $fluid-width;
+  	}
+	}
+}

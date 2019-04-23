@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 150%;
+  font-family: ocre-sans;
+  background-color: $branco;
+}
+
+body {
+  font-family: ocre-sans;
+  font-weight: 200;
+  font-style: normal;
+  background-color: $branco;
+  position: relative;
+  overflow-y: hidden;
+}
+
+main {
+    margin-top: 2.5rem;
+    min-height: 100vh;
+    min-height: calc(100vh - 2.5rem);
+    height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img, svg {
+  vertical-align: middle;
+}

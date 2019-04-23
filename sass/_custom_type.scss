@@ -1,0 +1,226 @@
+// Custom GC Typography
+
+//@include complete-font-face($suhmo);
+@include basic-font-face($ocre);
+
+@mixin titulo-0 {
+    font-family: 'ocre-poster-sans-swashes', sans-serif;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: normal;
+    @include media-breakpoint-up(lg) {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@mixin titulo-1 {
+    font-family: 'ocre-poster-sans', sans-serif;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-variant: all-small-caps;
+    @include media-breakpoint-up(lg) {
+    	font-size: 2.5rem; // 60px
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin titulo-2 {
+	font-family: 'ocre-poster-sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-variant: all-small-caps;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.75rem; // 48px
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin titulo-3 {
+	font-family: 'ocre-sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-variant: all-small-caps;
+    font-variant-numeric: oldstyle-nums;
+    font-weight: 400;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5rem; // 36px
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin titulo-4 {
+	font-family: 'ocre-sans', sans-serif;
+    font-size: 0.833333333rem;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    font-variant: all-small-caps;
+    font-variant-numeric: oldstyle-nums; 
+    font-weight: 400;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.3333333333rem; // 32px
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin titulo-5 {
+	font-family: 'ocre-sans', sans-serif;
+    font-size: .91666666666666rem; // 22px
+    line-height: 1.25rem;
+    margin-bottom: .5rem;
+    font-variant: all-small-caps;
+    font-variant-numeric: oldstyle-nums; 
+    letter-spacing: 0;
+    word-spacing: 0;
+    font-weight: 400;
+}
+
+@mixin texto-grande {
+	font-family: 'ocre-sans', sans-serif;
+    font-size: .91666666666666rem;
+    line-height: 1.5rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.3333333333rem; // 32px
+        line-height: 2rem;
+        font-weight: 100;
+        margin-bottom: .5rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin texto-medio {
+	font-size: 0.6666666666rem;
+    line-height: 1rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
+    font-family: ocre-sans, sans-serif;
+    @include media-breakpoint-up(lg) {
+        font-size: .91666666666666rem; // 22px
+        line-height: 1.5rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@mixin texto-pequeno {
+	font-size: 0.6666666666rem; // 16px
+	line-height: 1rem;
+	font-weight: 100;
+	margin-bottom: .5rem;
+	font-family: ocre-sans, sans-serif;
+    &:last-child {
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
+
+.h0 { @include titulo-0; }
+
+h1, .h1 { @include titulo-1; }
+
+h2, .h2 { @include titulo-2; }
+
+h3, .h3 { @include titulo-3; }
+
+h4, .h4 { @include titulo-4; }
+
+h5, .h5 { @include titulo-5; }
+
+p, .texto-medio { @include texto-medio; }
+
+.texto-pequeno { @include texto-pequeno; }
+
+blockquote, .texto-grande { @include texto-grande; }
+
+figcaption, li, input, textarea { @include texto-pequeno; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	color: $azul;
+	&:first-child {
+    	margin-top: 0
+    }
+}
+
+*::selection {
+    background-color: $rosa;
+    color: $branco;
+}
+
+h1, .h1 {
+	text-align: center;
+}
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-align: left;
+}
+
+blockquote, figcaption { 
+	font-style: italic;
+	text-align: center;
+}
+
+figure {
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul {
+    li {
+        position: relative;
+        list-style-type: none;
+        padding-left: .5rem;
+        &::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: $rosa;
+        }
+    }
+    &.no-bullet {
+        li {
+            padding-left: 0;
+            &::before {
+                content: '';
+            }
+        }
+    }
+}

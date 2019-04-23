@@ -1,0 +1,58 @@
+.btn {
+    font-weight: $custom_btn-font-weight;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out, transform .15s ease-in-out;
+    font-variant: all-small-caps;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-style: normal;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-group-lg > .btn, .btn-lg {
+    padding: .5rem 1.5rem;
+    font-size: .83333333333rem;//20px
+    line-height: 1.5rem;
+    border-radius: $custom_border-radius;
+}
+
+.btn-primary, .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active, .show>.btn-primary.dropdown-toggle {
+    color: $azul;
+    background-color: transparent;
+    border-color: $azul;
+    border: $custom_input-btn-border-width solid $azul;
+    transition: all .15s ease-in-out;
+    box-shadow: none;
+    &:hover {
+        color: $rosa;
+        border-color: $rosa;
+        background-color: transparent;
+        border: $custom_input-btn-border-width solid $rosa;
+    }
+    &:focus, &.focus {
+        box-shadow: none;
+    }
+}
+
+.negative {
+    .btn-primary {
+        color: $branco;
+        background-color: transparent;
+        border-color: $branco;
+        border: $custom_input-btn-border-width solid $branco;
+        &:hover {
+            color: $rosa;
+            border-color: $rosa;
+            background-color: transparent;
+            border: $custom_input-btn-border-width solid $rosa;
+        }
+    }
+}
+
+.btn-primary:hover, .btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    //background-color: $rosa-claro;
+    //border-color: transparent;
+    //box-shadow: 0px .3333333333rem .5rem rgba(0, 0, 0, 0.3);
+    //transform: translateY(-2px);
+}
