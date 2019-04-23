@@ -1,1 +1,1 @@
-# gc-theme
+# Grande Circular Wordpress Theme
