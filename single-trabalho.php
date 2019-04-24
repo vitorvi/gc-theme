@@ -65,7 +65,7 @@
                             </div>
                         <?php elseif(get_row_layout() == 'imagem_total'): ?>
                             <figure class="fade-in img-cheia" id="e_<?php echo $i; ?>">
-                                <img src="<?php echo get_sub_field('imagem'); ?>" class="e_img" />    
+                                <img src="<?php echo get_sub_field('imagem'); ?>" class="e_img" />
                             </figure>
                         <?php elseif(get_row_layout() == 'imagem_cheia_no_margin_nogutter'): ?>
                             <figure class="fade-in img-cheia no-margin-bottom no-gutter" id="e_<?php echo $i; ?>">
@@ -78,13 +78,13 @@
                         <?php elseif(get_row_layout() == 'imagem_grande'): ?>
                             <div class="img-grande gc-container" id="e_<?php echo $i; ?>">
                                 <figure class="row">
-                                    <img class="e_img fade-in col-12" src="<?php echo get_sub_field('imagem'); ?>" />  
+                                    <img class="e_img fade-in col-12" src="<?php echo get_sub_field('imagem'); ?>" />
                                 </figure>
                             </div>
                         <?php elseif(get_row_layout() == 'imagem_grande_caption'): ?>
                             <div class="img-grande gc-container" id="e_7">
                                 <figure class="row">
-                                    <img class="e_img fade-in col-12" src="<?php echo get_sub_field('imagem'); ?>" />  
+                                    <img class="e_img fade-in col-12" src="<?php echo get_sub_field('imagem'); ?>" />
                                     <figcaption class="e_cap col-12 col-lg-8 offset-lg-2"><?php echo get_sub_field('texto'); ?></figcaption>
                                 </figure>
                             </div>
@@ -111,7 +111,7 @@
                                 <div class="gc-container">
                                     <figure class="fade-in row">
                                         <img class="e_img offset-1 col-10 col-lg-8 offset-lg-2" src="<?php echo get_sub_field('imagem'); ?>" />
-                                        
+
                                     </figure>
                                 </div>
                             </section>
@@ -142,7 +142,7 @@
                             <div class="mosaico-duplo <?php echo $class; ?>" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
                                     <?php if(get_sub_field('cover__livre') == 'cover') : ?>
-                                        <div class="e_img e_img_1 img col-12 col-lg-6"> 
+                                        <div class="e_img e_img_1 img col-12 col-lg-6">
                                             <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                         </div>
                                         <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -173,7 +173,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_duplo_paisagem') : ?>
                             <div class="mosaico-duplo paisagem gc-container" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6"> 
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -195,7 +195,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_duplo') : ?>
                             <div class="mosaico-duplo quadrado gc-container" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6">            
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -206,7 +206,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_duplo_quadrado_nomargin_button') : ?>
                             <div class="mosaico-duplo no-margin-bottom quadrado gc-container" id="e_2">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6">                                        
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -217,7 +217,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_duplo_quadrado_nomargin') : ?>
                             <div class="mosaico-duplo no-margin-bottom quadrado" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6">      
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -233,13 +233,13 @@
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_02'); ?>);"></figure>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         <?php elseif(get_row_layout() == 'mosaico_duplo_no_margin') : ?>
                             <div class="mosaico-duplo no-margin-bottom gc-container" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6">            
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -272,7 +272,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_duplo_gutter') : ?>
                             <div class="mosaico-duplo" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-6">      
+                                    <div class="e_img e_img_1 img col-12 col-lg-6">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-6">
@@ -347,7 +347,7 @@
                                     <div class="e_img e_img_1 img col-12 col-lg-4">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
-                                    <div class="e_img e_img_2 img col-12 col-lg-4">                                        
+                                    <div class="e_img e_img_2 img col-12 col-lg-4">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_02'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_3 img col-12 col-lg-4">
@@ -358,7 +358,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_triplo_gutter') : ?>
                             <div class="mosaico-triplo" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-12 col-lg-4">      
+                                    <div class="e_img e_img_1 img col-12 col-lg-4">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-12 col-lg-4">
@@ -372,7 +372,7 @@
                         <?php elseif(get_row_layout() == 'mosaico_quadruplo') : ?>
                             <div class="mosaico-quadruplo quadrado gc-container" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-6 col-lg-3">      
+                                    <div class="e_img e_img_1 img col-6 col-lg-3">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-6 col-lg-3">
@@ -384,13 +384,13 @@
                                     <div class="e_img e_img_3 img col-6 col-lg-3">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_04'); ?>);"></figure>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         <?php elseif(get_row_layout() == 'mosaico_quadruplo_nomargin') : ?>
                             <div class="mosaico-quadruplo no-margin-bottom quadrado gc-container" id="e_<?php echo $i; ?>">
                                 <div class="row fade-in">
-                                    <div class="e_img e_img_1 img col-6 col-lg-3">      
+                                    <div class="e_img e_img_1 img col-6 col-lg-3">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_01'); ?>);"></figure>
                                     </div>
                                     <div class="e_img e_img_2 img col-6 col-lg-3">
@@ -402,7 +402,7 @@
                                     <div class="e_img e_img_3 img col-6 col-lg-3">
                                         <figure style="background-image: url(<?php echo get_sub_field('imagem_04'); ?>);"></figure>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         <?php elseif(get_row_layout() == 'imagem_subtitulo_paragrafo') : ?>
@@ -449,17 +449,138 @@
                                 <?php endforeach; ?>
                             <?php endif; ?>
                             <div class="mosaico-duplo quadrado gc-container <?php echo $class; ?>" id="e_9">
-                                <div class="row fade-in">                                    
+                                <div class="row fade-in">
                                     <figcaption class="e_cap offset-1 col-10 col-lg-8 offset-lg-2"><?php echo get_sub_field('texto'); ?></figcaption>
                                 </div>
                             </div>
+                        <?php elseif(get_row_layout() == 'fonte') : ?>
+                          <style type="text/css">
+                            @font-face {
+                              font-family: '<?php echo get_sub_field('nome_fonte'); ?>';
+                              src: url('<?php echo get_sub_field('url_fonte'); ?>');
+                              font-style: normal;
+                              font-weight: normal;
+                            };
+                          </style>
+
+                          <div class="fade-in fonte gc-container d-flex flex-column align-items-center" id="e_<?php echo $i; ?>">
+                            <h2 class="subtitulo e_h1 h3 col-12 col-lg-8" <?php if (get_field('cor')): ?>style="color:<?php echo get_field('cor'); ?>"<?php endif; ?>><?php echo get_sub_field('subtitulo'); ?></h2>
+                            <p id="e_<?php echo $i; ?>_txt" class="e_txt col-12 col-lg-8" style="font-family: '<?php echo get_sub_field('nome_fonte'); ?>', 'ocre-sans', sans-serif; color:<?php echo get_field('cor'); ?>" contenteditable="true">
+                              <?php echo get_sub_field('txt'); ?>
+                            </p>
+                            <a class="btn btn-primary" href="<?php echo get_sub_field('pacote_fonte'); ?>" download>Fazer download</a>
+                          </div>
+
+                          <script type="text/javascript">
+                            var editableDiv = document.getElementById('e_<?php echo $i; ?>_txt');
+
+                            $(document).ready(function(){
+                              var scrollTop = $(window).scrollTop();
+                              var offsetTop = $(editableDiv).offset().top;
+                              var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+                              if ((offsetTop - scrollTop) < windowHeight*2/3) {
+                                //editableDiv.focus();
+                                var placeholder = $(editableDiv).text();
+                                $(editableDiv).text(placeholder + ' ');
+                                    $(editableDiv).text(placeholder);
+                              }
+                            });
+
+                            window.onscroll = function (e) {
+                              var scrollTop = $(window).scrollTop();
+                              var offsetTop = $(editableDiv).offset().top;
+                              var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+                              if ((offsetTop - scrollTop) < windowHeight*2/3) {
+                                //editableDiv.focus();
+                                var placeholder = $(editableDiv).text();
+                                $(editableDiv).text(placeholder + ' ');
+                                    $(editableDiv).text(placeholder);
+                              }
+                            }
+
+                            function handlepaste (e) {
+                                var types, pastedData, savedContent;
+
+                                // Browsers that support the 'text/html' type in the Clipboard API (Chrome, Firefox 22+)
+                                if (e && e.clipboardData && e.clipboardData.types && e.clipboardData.getData) {
+
+                                    // Check for 'text/html' in types list. See abligh's answer below for deatils on
+                                    // why the DOMStringList bit is needed. We cannot fall back to 'text/plain' as
+                                    // Safari/Edge don't advertise HTML data even if it is available
+                                    types = e.clipboardData.types;
+                                    if (((types instanceof DOMStringList) && types.contains("text/html")) || (types.indexOf && types.indexOf('text/html') !== -1)) {
+
+                                        // Extract data and pass it to callback
+                                        pastedData = e.clipboardData.getData('text/html');
+                                        processPaste(editableDiv, pastedData);
+
+                                        // Stop the data from actually being pasted
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                        return false;
+                                    }
+                                }
+
+                                // Everything else: Move existing element contents to a DocumentFragment for safekeeping
+                                savedContent = document.createDocumentFragment();
+                                while(editableDiv.childNodes.length > 0) {
+                                    savedContent.appendChild(editableDiv.childNodes[0]);
+                                }
+
+                                // Then wait for browser to paste content into it and cleanup
+                                waitForPastedData(editableDiv, savedContent);
+                                return true;
+                            }
+
+                            function waitForPastedData (elem, savedContent) {
+
+                                // If data has been processes by browser, process it
+                                if (elem.childNodes && elem.childNodes.length > 0) {
+
+                                    // Retrieve pasted content via innerHTML
+                                    // (Alternatively loop through elem.childNodes or elem.getElementsByTagName here)
+                                    var pastedData = elem.innerHTML;
+
+                                    // Restore saved content
+                                    elem.innerHTML = "";
+                                    elem.appendChild(savedContent);
+
+                                    // Call callback
+                                    processPaste(elem, pastedData);
+                                }
+
+                                // Else wait 20ms and try again
+                                else {
+                                    setTimeout(function () {
+                                        waitForPastedData(elem, savedContent)
+                                    }, 20);
+                                }
+                            }
+
+                            function processPaste (elem, pastedData) {
+                                // Do whatever with gathered data;
+                                //alert(pastedData);
+                                elem.focus();
+                            }
+
+                            // Modern browsers. Note: 3rd argument is required for Firefox <= 6
+                            if (editableDiv.addEventListener) {
+                                editableDiv.addEventListener('paste', handlepaste, false);
+                            }
+                            // IE <= 8
+                            else {
+                                editableDiv.attachEvent('onpaste', handlepaste);
+                            }
+                          </script>
                         <?php elseif(get_row_layout() == 'galeria') : ?>
                             <?php $images = get_sub_field('galeria'); ?>
                             <?php if($images) : ?>
                                 <section id="e_<?php echo $i; ?>" class="fade-in carrossel">
                                     <div class="gc-container">
                                         <div class="row">
-                                            <div class="owl-carousel owl-theme col-12 col-lg-10 offset-lg-1">                
+                                            <div class="owl-carousel owl-theme col-12 col-lg-10 offset-lg-1">
                                                 <?php $j=0; ?>
                                                 <?php foreach( $images as $image ): ?>
                                                     <div class="item">
@@ -468,7 +589,7 @@
                                                     <?php $j++; ?>
                                                 <?php endforeach; ?>
                                             </div>
-                                            
+
                                             <div class="prev d-none d-lg-flex align-items-center justify-content-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="72" viewBox="0 0 36 72">
                                                     <path d="M34.00241,69.989,3.75495,40.17994a5.85262,5.85262,0,0,1,0-8.3623L34,2.011" />
@@ -562,12 +683,12 @@
                                     </div>
                                 </div>
                             </a>
-                        <?php endwhile; ?>    
+                        <?php endwhile; ?>
                     </div>
                 </div>
             </section>
         <?php endif; ?>
-        <?php wp_reset_query(); ?> 
+        <?php wp_reset_query(); ?>
     </main>
 <?php
 	get_footer();
