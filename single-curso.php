@@ -8,7 +8,7 @@
                     <div class="gc-container">
                         <h1 class="fade-in"><?php echo get_the_title(); ?></h1>
                         <p class="col-sm-12 col-lg-8 offset-lg-2 fade-in"><?php echo get_field('resumo'); ?></p>
-                        <a href="<?php echo get_field('link_entre_na_lista_de_espera'); ?>" target="_blank" class="btn btn-primary">Entre na lista de espera</a>
+                        <a href="<?php echo get_field('link_entre_na_lista_de_espera'); ?>" target="_blank" class="btn btn-primary">Tenho interesse</a>
                         <div class="row">
                             <div class="col-12 video-container pausado">
                                 <?php if(get_field('imagem_de_capa')) : ?>
